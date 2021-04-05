@@ -5,7 +5,7 @@
   font-family: Lato, sans-serif;
 }
 
-.title-wrapper {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
@@ -16,14 +16,14 @@
   width: 100%;
 }
 
-.title-wrapper 
+.header
 .info-about-matrix {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 	
-  .title-wrapper { 
+  .header { 
     text-align: center;
   }
   
@@ -172,6 +172,6 @@
   width: 224px;
 }
 
- .edit-mode .task {
+ .edit-mode .label-task {
   display: none;
 }
