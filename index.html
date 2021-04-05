@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
   <head>
     <title>Todo App</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" 
@@ -7,15 +7,15 @@
 	<link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="page">
-    <div class="title-wrapper">
+    <header class="header">
 	  <img class="matrix_img" src="./eisenhower-matrix.jpg">
 	  <a class="info-about-matrix" 
 	      href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-	</div>
-	<div class="content-wrapper">
+	</header>
+	<main class="content-wrapper">
 	  <p id="add-new-task-block">
 	    <label for="new-task" class="label-new-task">Add Item</label>
-		<div class="new-task-form">
+        <div class="new-task-form">
 		  <input id="new-task" class="task text-field input-new-task" type="text">
 		  <button class="action">Add</button>
 		</div>
@@ -33,7 +33,7 @@
 		</li>
 		<li class="edit-mode task-element">
 		  <input type="checkbox" class="check-field">
-		    <label class="task">Go Shopping</label>
+		    <label class="task label-task">Go Shopping</label>
 		  <input type="text" value="Go Shopping" class="task text-field">
 		  <button class="edit action">Save</button>
 		  <button class="delete action">
@@ -53,7 +53,7 @@
 		  </button>
 		</li>
 	  </ul>
-	</div>
+	</main>
 	<script src="app.js"></script>
   </body>
 </html>
