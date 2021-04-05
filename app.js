@@ -18,7 +18,7 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-
+	listItem.className='task-element';
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
@@ -31,22 +31,25 @@ var createNewTaskElement=function(taskString){
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
-
+ 
     label.innerText=taskString;
-    label.className='task';
+    label.classList.add("task", "label-task");
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+	checkBox.className="check-field";
+	 
     editInput.type="text";
-    editInput.className="task";
+    editInput.classList.add("task", "text-field");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.classList.add("edit", "action");
 
-    deleteButton.className="delete";
+    deleteButton.classList.add("delete", "action");
     deleteButtonImg.src='./remove.svg';
-    deleteButton.appendChild(deleteButtonImg);
-
+	deleteButtonImg.alt="delete";
+	deleteButtonImg.classList.add("delete-img");
+    deleteButton.appendChild(deleteButtonImg); 
 
     //and appending.
     listItem.appendChild(checkBox);
@@ -56,7 +59,6 @@ var createNewTaskElement=function(taskString){
     listItem.appendChild(deleteButton);
     return listItem;
 }
-
 
 
 var addTask=function(){
@@ -114,7 +116,6 @@ var deleteTask=function(){
 
 }
 
-
 //Mark task completed
 var taskCompleted=function(){
     console.log("Complete Task...");
@@ -126,7 +127,6 @@ var taskCompleted=function(){
 
 }
 
-
 var taskIncomplete=function(){
     console.log("Incomplete Task...");
 //Mark task as incomplete.
@@ -136,8 +136,6 @@ var taskIncomplete=function(){
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
-
-
 
 var ajaxRequest=function(){
     console.log("AJAX Request");
@@ -159,7 +157,6 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     var editButton=taskListItem.querySelector("button.edit");
     var deleteButton=taskListItem.querySelector("button.delete");
 
-
     //Bind editTask to edit button.
     editButton.onclick=editTask;
     //Bind deleteTask to delete button.
@@ -175,18 +172,12 @@ for (var i=0; i<incompleteTaskHolder.children.length;i++){
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
-
-
-
-
+ 
 //cycle over completedTasksHolder ul list items
 for (var i=0; i<completedTasksHolder.children.length;i++){
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
-}
-
-
-
+} 
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
