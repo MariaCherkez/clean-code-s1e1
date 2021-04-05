@@ -49,11 +49,11 @@
 }
 
 .task-element, .title {
-  list-style:none;
+  list-style: none;
 }
 
 .action, .text-field, .check-field {
-  outline:none;
+  outline: none;
 }
 
 .action {
@@ -155,14 +155,14 @@
  
  /* Edit Task */
  .tasks-list .text-field { 
-  display:none
+  display: none
 }
 
 .edit-mode .text-field {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
  .edit-mode .task {
-  display:none;
+  display: none;
 }
