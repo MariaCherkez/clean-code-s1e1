@@ -4,46 +4,58 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .title-wrapper {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .matrix_img {
   width: 100%;
 }
+
 .title-wrapper .info-about-matrix {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.title-wrapper { text-align: center;
-}
+	
+  .title-wrapper { 
+    text-align: center;
+  }
+  
 }
 .content-wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .task {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
+
 .new-task-form {
   display: flex;
 }
+
 .tasks-list  {
   margin:0;
   padding: 0px;
 }
+
 .task-element, .title {
   list-style:none;
 }
+
 .action, .text-field, .check-field {
   outline:none;
 }
+
 .action {
   background: none;
   border: 0px;
@@ -53,6 +65,7 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 .action:hover {
   color: #3a3a3a
 }
@@ -67,6 +80,7 @@
   margin: 0;
   text-transform: uppercase;
 }
+
 .text-field {
   margin: 0;
   font-size: 18px;
@@ -79,6 +93,7 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 .text-field:focus {
   color: #333;
 }
@@ -88,6 +103,7 @@
   display: block;
   margin: 0 0 20px;
 }
+
 .input-new-task {
   width: 318px;
 }
@@ -101,6 +117,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .task-element > * {
   vertical-align: middle;
 }
@@ -108,20 +125,24 @@
 .check-field {
   margin: 0 10px;
 }
+
 .task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 .task-element .text-field {
   width: 226px
 }
+
 .delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 .delete-img:hover {
   transform: rotateZ(0);
 }
@@ -136,10 +157,12 @@
  .tasks-list .text-field { 
   display:none
 }
+
 .edit-mode .text-field {
   display:inline-block;
   width:224px
 }
+
  .edit-mode .task {
   display:none;
 }
