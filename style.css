@@ -16,7 +16,8 @@
   width: 100%;
 }
 
-.title-wrapper .info-about-matrix {
+.title-wrapper 
+.info-about-matrix {
   font-family: fantasy, cursive;
 }
 
@@ -36,23 +37,26 @@
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .new-task-form {
   display: flex;
 }
 
-.tasks-list  {
-  margin:0;
+.tasks-list {
+  margin: 0;
   padding: 0px;
 }
 
-.task-element, .title {
+.task-element, 
+.title {
   list-style: none;
 }
 
-.action, .text-field, .check-field {
+.action, 
+.text-field, 
+.check-field {
   outline: none;
 }
 
@@ -67,11 +71,12 @@
 }
 
 .action:hover {
-  color: #3a3a3a
+  color: #3a3a3a;
 }
 
 /* Heading */
-.title, .label-new {
+.title, 
+.label-new-task {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -118,7 +123,10 @@
   align-items: center;
 }
 
-.task-element > * {
+.task-element .check-field,
+.task-element .task,
+.task-element .text-field,
+.task-element .action {
   vertical-align: middle;
 }
 
@@ -133,8 +141,9 @@
   width: 226px;
 }
 
-.task-element .text-field {
-  width: 226px
+.task-element 
+.text-field {
+  width: 226px;
 }
 
 .delete-img {
@@ -155,12 +164,12 @@
  
  /* Edit Task */
  .tasks-list .text-field { 
-  display: none
+  display: none;
 }
 
 .edit-mode .text-field {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
  .edit-mode .task {
